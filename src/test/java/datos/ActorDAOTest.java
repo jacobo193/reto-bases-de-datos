@@ -1,14 +1,15 @@
-package test;
-import datos.ActorJDBC;
+package datos;
 import domain.ActorDTO;
+import org.junit.Test;
 
 import java.util.List;
 
 class ActorDAOTest {
+    @Test
     public static void main(String[] args) {
-        ActorJDBC actorDAO = new ActorJDBC();
+        ActorJDBC actorJDBC = new ActorJDBC();
         List<ActorDTO> actors;
-        actors = ActorJDBC.seleccionar();
+        actors = actorJDBC.select();
         for(ActorDTO actor: actors) System.out.println("Actores =" + actor);
 
     }

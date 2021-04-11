@@ -1,8 +1,12 @@
-package test;
+package datos;
+
+import org.junit.Test;
 
 import java.sql.*;
+
 // clase para concectarse MySQL
 public class TestMySqlJDBC {
+    @Test
     public static void main(String[] args) {
         //creando variable del Url para la conxion
        var url = "jdbc:mysql://sofka-training.cpxphmd1h1ok.us-east-1.rds.amazonaws.com:3306/jacobo_diaz?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";

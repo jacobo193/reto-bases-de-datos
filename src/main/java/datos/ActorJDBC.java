@@ -9,14 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActorJDBC<actor> {
+public class ActorJDBC<actor> implements ActorDao{
 
     private Connection conexionTransacional;
     private static final String SQL_SELECT =  "SELECT actor_id, first_name, last_name FROM jacobo_diaz.actor";
-    private static final String SQL_INSERT = "INSERT INTO jacobo_diaz.actor (first_name, last_nam) VALUE (?,?)";
 
 
-    public static List<ActorDTO> seleccionar() {
+
+    public List<ActorDTO> select() {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
